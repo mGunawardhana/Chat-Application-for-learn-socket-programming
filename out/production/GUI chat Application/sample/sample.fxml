@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <JFXButton fx:id="button_send" buttonType="RAISED" layoutX="456.0" layoutY="479.0" prefHeight="49.0" prefWidth="119.0" style="-fx-background-color: #2ed573;" text="Send">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></JFXButton>
+      <TextField fx:id="tf_message" layoutX="25.0" layoutY="479.0" prefHeight="49.0" prefWidth="425.0" />
+      <Label layoutX="146.0" layoutY="26.0" text="\@mGunawardhana's Chat" textFill="#f1c40f">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="467.0" prefHeight="0.0" prefWidth="549.0" />
+      <ScrollPane fx:id="sp_main" layoutX="26.0" layoutY="72.0" prefHeight="385.0" prefWidth="549.0">
+         <content>
+            <VBox fx:id="vbox_messages" prefHeight="373.0" prefWidth="540.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextFlow prefHeight="24.0" prefWidth="394.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+
+   </children>
+</AnchorPane>
