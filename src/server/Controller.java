@@ -6,6 +6,7 @@ package server;
  */
 
 import com.jfoenix.controls.JFXButton;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -77,8 +78,8 @@ public class Controller implements Initializable {
                             " -fx-background-radius: 20px");
 
 
-                    textFlow.setPadding(new Insets(5,10,5,10));
-                    text.setFill(Color.color(0.934,0.945,0.996));
+                    textFlow.setPadding(new Insets(5, 10, 5, 10));
+                    text.setFill(Color.color(0.934, 0.945, 0.996));
 
                     hBox.getChildren().add(textFlow);
                     vbox_messages.getChildren().add(hBox);
@@ -88,8 +89,27 @@ public class Controller implements Initializable {
                 }
             }
         });
+    }
 
+    public static void addLabel (String messageFromClient, VBox vbox){
+        HBox hBox = new HBox();
+        hBox.setAlignment(Pos.CENTER_LEFT);
+        hBox.setPadding(new Insets(5,5,5,10));
 
+        Text text = new Text(messageFromClient);
+        TextFlow textFlow = new TextFlow(text);
+        textFlow.setStyle("-fx-background-color: rgb(233,233,235);" +
+                " -fx-background-radius: 20px");
 
+        textFlow.setPadding(new Insets(5,10,5,10));
+        hBox.getChildren().add(textFlow);
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                vbox.getChildren().add(hBox);
+
+            }
+        });
     }
 }
