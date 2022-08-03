@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="colors-1.4">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/lib/colors-1.4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/lib/controlsfx-8.40.12.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/lib/fontawesomefx-fontawesome-4.7.0-9.1.2.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/lib/jfoenix-8.0.7.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/lib/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/colors-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-8.40.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-fontawesome-4.7.0-9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfoenix-8.0.8.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

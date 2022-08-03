@@ -90,6 +90,9 @@ public class Controller implements Initializable {
                     tf_message.clear();
                 }
             }
+
+
+
         });
     }
 
@@ -110,7 +113,6 @@ public class Controller implements Initializable {
             @Override
             public void run() {
                 vbox.getChildren().add(hBox);
-
             }
         });
     }

@@ -5,41 +5,53 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="600.0"
-            style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171"
-            fx:controller="client.Controller">
+
+<AnchorPane prefHeight="565.0" prefWidth="600.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
     <children>
-        <JFXButton fx:id="button_send" buttonType="RAISED" layoutX="456.0" layoutY="479.0" prefHeight="49.0"
-                   prefWidth="119.0" style="-fx-background-color: #2ed573;" text="Send">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#192a56" height="76.0" layoutX="1.0" layoutY="491.0" stroke="WHITE" strokeType="INSIDE" width="600.0" />
+        <JFXButton fx:id="button_send" buttonType="RAISED" layoutX="456.0" layoutY="505.0" prefHeight="49.0" prefWidth="119.0" style="-fx-background-color: #2ed573;" text="Send">
             <font>
-                <Font name="System Bold" size="20.0"/>
+                <Font name="System Bold" size="20.0" />
             </font>
         </JFXButton>
-        <TextField fx:id="tf_message" layoutX="25.0" layoutY="479.0" prefHeight="49.0" prefWidth="425.0"/>
-        <Label layoutX="146.0" layoutY="26.0" text="\@mGunawardhana's Chat" textFill="#f1c40f">
-            <font>
-                <Font name="System Bold Italic" size="25.0"/>
-            </font>
-        </Label>
-        <Separator layoutX="25.0" layoutY="467.0" prefHeight="0.0" prefWidth="549.0"/>
-        <ScrollPane fx:id="sp_main" layoutX="26.0" layoutY="72.0" prefHeight="385.0" prefWidth="549.0">
+        <TextField fx:id="tf_message" layoutX="25.0" layoutY="505.0" prefHeight="49.0" prefWidth="425.0" />
+        <Separator layoutX="25.0" layoutY="483.0" prefHeight="0.0" prefWidth="549.0" />
+        <ScrollPane fx:id="sp_main" layoutX="26.0" layoutY="91.0" prefHeight="385.0" prefWidth="549.0">
             <content>
-                <VBox fx:id="vbox_messages" prefHeight="373.0" prefWidth="540.0">
+                <VBox fx:id="vbox_messages" prefHeight="366.0" prefWidth="540.0">
                     <children>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                             <children>
-                                <TextFlow prefHeight="24.0" prefWidth="394.0"/>
+                                <TextFlow prefHeight="24.0" prefWidth="394.0">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </children></TextFlow>
                             </children>
                         </HBox>
                     </children>
                 </VBox>
             </content>
         </ScrollPane>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#192a56" height="60.0" layoutX="1.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="146.0" layoutY="26.0" text="\@mGunawardhana's Chat" textFill="#f1c40f">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="51.0" text="Client" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Circle fill="#2ed573" layoutX="13.0" layoutY="63.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
 
     </children>
 </AnchorPane>
