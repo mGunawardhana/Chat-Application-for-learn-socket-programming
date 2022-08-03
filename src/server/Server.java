@@ -6,8 +6,7 @@
 
 package server;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -19,11 +18,32 @@ public class Server {
     private BufferedWriter bufferedWriter;
 
     public Server(ServerSocket serverSocket) {
-        this.serverSocket = serverSocket;
-        this.socket=serverSocket.accept();
-        socket.getInputStream();
-        //TODO : 0:28:27 / 11.44 PM
+
+        try{
+            this.serverSocket = serverSocket;
+            this.socket=serverSocket.accept();
+
+            this.bufferedReader= new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+        }catch (IOException e){
+            System.out.println("Error Creating Server");
+        }
     }
 
+    public void closeEverything(Socket socket,BufferedReader bufferedReader,BufferedWriter bufferedWriter){
+        try {
+            if (bufferedReader != null) {
+                bufferedReader.close();
+            }
+            if (bufferedWriter != null) {
+                bufferedWriter.close();
+            }
+            if (socket != null) {
+                socket.close();
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
 
 }
