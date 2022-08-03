@@ -1,12 +1,15 @@
-package server;
 /*
  * Developed by - mGunawardhana
  * Contact email - mrgunawardhana27368@gmail.com
  * what's app - 071 - 9043372
  */
 
+package client;
+
 import com.jfoenix.controls.JFXButton;
+import com.sun.xml.internal.messaging.saaj.soap.impl.TextImpl;
 import javafx.application.Platform;
+import javafx.beans.Observable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -22,14 +25,14 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import server.Server;
 
 import java.io.IOException;
-import java.net.ServerSocket;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-
     @FXML
     public JFXButton button_send;
 
@@ -41,16 +44,16 @@ public class Controller implements Initializable {
 
     @FXML
     public VBox vbox_messages;
-    private Server server;
+    private Client client;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        try {
-            server = new Server(new ServerSocket(1234));
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Error creating server");
-        }
+
+        try{
+           client = new Client(new Socket("localhost",1234));
+            System.out.println("Connected to Server");
+        }catch (IOException e){}
 
         vbox_messages.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
@@ -59,25 +62,28 @@ public class Controller implements Initializable {
             }
         });
 
-//        server.recieveMessageFromClient(vbox_messages);
+//        client.recieveMessageFromServer(vbox_messages);
 
-        server.receiveMessageFromClient(vbox_messages);
-
+        client.receiveMessageFromServer(vbox_messages);
         button_send.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 String messageToSend = tf_message.getText();
-                if (!messageToSend.isEmpty()) {
-                    HBox hBox = new HBox();
+                if(!messageToSend.isEmpty()){
+                    HBox hBox= new HBox();
                     hBox.setAlignment(Pos.CENTER_RIGHT);
-                    hBox.setPadding(new Insets(5, 5, 5, 10));
 
-                    Text text = new Text(messageToSend);
+                    hBox.setPadding(new Insets(5,5,5,10));
+
+
+                    javafx.scene.text.Text text = new javafx.scene.text.Text(messageToSend);
                     TextFlow textFlow = new TextFlow(text);
+
 
                     textFlow.setStyle("-fx-color: rgb(239,242,255);" +
                             "-fx-background-color: rgb(15,125,242);" +
                             " -fx-background-radius: 20px");
+
 
 
                     textFlow.setPadding(new Insets(5, 10, 5, 10));
@@ -86,19 +92,19 @@ public class Controller implements Initializable {
                     hBox.getChildren().add(textFlow);
                     vbox_messages.getChildren().add(hBox);
 
-                    server.sendMessageToClient(messageToSend);
+                    client.sendMessageToServer(messageToSend);
                     tf_message.clear();
                 }
             }
         });
     }
 
-    public static void addLabel (String messageFromClient, VBox vbox){
+    public static  void addLabel(String msgFromServer, VBox vBox){
         HBox hBox = new HBox();
         hBox.setAlignment(Pos.CENTER_LEFT);
         hBox.setPadding(new Insets(5,5,5,10));
 
-        Text text = new Text(messageFromClient);
+        javafx.scene.text.Text text = new Text(msgFromServer);
         TextFlow textFlow = new TextFlow(text);
         textFlow.setStyle("-fx-background-color: rgb(233,233,235);" +
                 " -fx-background-radius: 20px");
@@ -109,7 +115,7 @@ public class Controller implements Initializable {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                vbox.getChildren().add(hBox);
+                vBox.getChildren().add(hBox);
 
             }
         });

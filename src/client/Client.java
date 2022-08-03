@@ -4,56 +4,53 @@
  * what's app - 071 - 9043372
  */
 
-package server;
+package client;
 
 import javafx.scene.layout.VBox;
+import server.Controller;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
-
+public class Client {
     private ServerSocket serverSocket;
     private Socket socket;
     private BufferedReader bufferedReader;
     private BufferedWriter bufferedWriter;
 
-    public Server(ServerSocket serverSocket) {
-
+    public Client(Socket socket) {
         try {
-            this.serverSocket = serverSocket;
-            this.socket = serverSocket.accept();
-
+            this.socket = socket;
             this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             this.bufferedWriter = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         } catch (IOException e) {
-            System.out.println("Error Creating Server");
-            closeEverything(socket, bufferedReader, bufferedWriter);
+            System.out.println("Error creating client");
+            e.printStackTrace();
+            closeEverything(socket,bufferedReader,bufferedWriter);
         }
     }
 
-    public void sendMessageToClient(String messageToClient) {
+    public void sendMessageToServer(String messageToServer){
         try {
-            bufferedWriter.write(messageToClient);
+            bufferedWriter.write(messageToServer);
             bufferedWriter.newLine();
             bufferedWriter.flush();
         } catch (IOException e) {
             System.out.println("Error Sending message to client");
             e.printStackTrace();
-
         }
     }
 
-    public void receiveMessageFromClient(VBox vBox) {
+    public void receiveMessageFromServer(VBox vBox){
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while (socket.isConnected()) {
 
                     try {
-                        String messageFromClient = bufferedReader.readLine();
-                        Controller.addLabel(messageFromClient, vBox);
+                        String messageFromServer = bufferedReader.readLine();
+                        Controller.addLabel(messageFromServer, vBox);
                     } catch (IOException e) {
                         System.out.println("Error receiving message from the client");
                         closeEverything(socket,bufferedReader,bufferedWriter);
@@ -63,7 +60,6 @@ public class Server {
             }
         }).start();
     }
-
 
     public void closeEverything(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter) {
         try {
@@ -80,5 +76,4 @@ public class Server {
             e.printStackTrace();
         }
     }
-
 }
