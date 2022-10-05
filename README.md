@@ -30,6 +30,7 @@ A socket is one end-point of a two-way communication link between two programs r
 ### If you hava any bugs or issues , If you want to explain my code or if you need help to develop your projects pleace contact me on :point_right: <br> whats app -* 071 9043372  :hugs:
 
 
-      ![repo size](https://img.shields.io/github/repo-size/mGunawardhana/Chat-Application?style=for-the-badge)
-      ![Github](https://img.shields.io/github/license/mGunawardhana/Chat-Application?style=for-the-badge)
+![repo size](https://img.shields.io/github/repo-size/mGunawardhana/Chat-Application?style=for-the-badge)
+![repo size](https://img.shields.io/github/license/mGunawardhana/Chat-Application?style=for-the-badge)
+
 
