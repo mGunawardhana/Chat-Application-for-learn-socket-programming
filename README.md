@@ -29,15 +29,18 @@ A socket is one end-point of a two-way communication link between two programs r
 
 <div align="center">
 
-### 𝕀𝕗 𝕪𝕠𝕦 𝕙𝕒𝕧𝕒 𝕒𝕟𝕪 𝕓𝕦𝕘𝕤 𝕠𝕣 𝕚𝕤𝕤𝕦𝕖𝕤 , 𝕀𝕗 𝕪𝕠𝕦 𝕨𝕒𝕟𝕥 𝕥𝕠 𝕖𝕩𝕡𝕝𝕒𝕚𝕟 𝕞𝕪 𝕔𝕠𝕕𝕖 𝕠𝕣 𝕚𝕗 𝕪𝕠𝕦 𝕟𝕖𝕖𝕕 𝕙𝕖𝕝𝕡 𝕥𝕠 𝕕𝕖𝕧𝕖𝕝𝕠𝕡 𝕪𝕠𝕦𝕣 𝕡𝕣𝕠𝕛𝕖𝕔𝕥𝕤 𝕡𝕝𝕖𝕒𝕔𝕖 𝕔𝕠𝕟𝕥𝕒𝕔𝕥 𝕞𝕖 𝕠𝕟 :point_right:<br> <br> <br> mnshgnwardhana622@gmail.com  :hugs:
+### (★) If you hava any bugs or issues , If you want to explain my code or if you need help to develop your projects pleace contact me on (★) 👇<br> <br> <br> mnshgnwardhana622@gmail.com  
 
 </div>
 <br><br>
 <div align="center">
 
-![repo size](https://img.shields.io/github/repo-size/mGunawardhana/Chat-Application?style=for-the-badge)
+![repo size](https://img.shields.io/github/repo-size/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
+![GitHub](https://img.shields.io/github/license/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
+![GitHub Forks](https://img.shields.io/github/forks/mGunawardhana/Chat-Application?&labelColor=black&color=f7b731&style=for-the-badge) &nbsp;
+![GitHub Watchers](https://img.shields.io/github/watchers/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
+![GitHub Last Commit](https://img.shields.io/github/last-commit/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
 
-![GitHub](https://img.shields.io/github/license/mGunawardhana/Chat-Application?style=for-the-badge)
 
 </div>
 
