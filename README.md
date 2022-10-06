@@ -29,24 +29,24 @@ A socket is one end-point of a two-way communication link between two programs r
 
 <div align="center">
 
-### (★) If you hava any bugs or issues , If you want to explain my code or if you need help to develop your projects pleace contact me on (★) 👇<br> <br> <br> mnshgnwardhana622@gmail.com  
-
-</div>
-<br><br>
-<div align="center">
-
-![repo size](https://img.shields.io/github/repo-size/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
-![GitHub](https://img.shields.io/github/license/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
-![GitHub Forks](https://img.shields.io/github/forks/mGunawardhana/Chat-Application?&labelColor=black&color=f7b731&style=for-the-badge) &nbsp;
-![GitHub Watchers](https://img.shields.io/github/watchers/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
-![GitHub Last Commit](https://img.shields.io/github/last-commit/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
+### (★) ɪꜰ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ʙᴜɢꜱ ᴏʀ ɪꜱꜱᴜᴇꜱ , ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴇxᴘʟᴀɪɴ ᴍʏ ᴄᴏᴅᴇ ᴏʀ ɪꜰ ʏᴏᴜ ɴᴇᴇᴅ ʜᴇʟᴘ ᴛᴏ ᴅᴇᴠᴇʟᴏᴘ ʏᴏᴜʀ ᴘʀᴏᴊᴇᴄᴛꜱ ᴘʟᴇᴀꜱᴇ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ᴏɴ (★) 👇<br> <br> <br> mnshgnwardhana622@gmail.com  
 
 </div>
 
 <br><br>
+<div align="center">
+
+![repo size](https://img.shields.io/github/repo-size/mGunawardhana/JS-Calc?style=for-the-badge) &nbsp;
+![GitHub](https://img.shields.io/github/license/mGunawardhana/JS-Calc?style=for-the-badge) &nbsp;
+![GitHub Forks](https://img.shields.io/github/forks/mGunawardhana/JS-Calc?&labelColor=black&color=f7b731&style=for-the-badge) &nbsp;
+![GitHub Watchers](https://img.shields.io/github/watchers/mGunawardhana/JS-Calc?style=for-the-badge) &nbsp;
+![GitHub Last Commit](https://img.shields.io/github/last-commit/mGunawardhana/JS-Calc?style=for-the-badge) &nbsp;
+
+</div>
+<br><br>
 
 <div align="center">
-  
-## © 2022 mGunawardhana,Inc. All rights reserved.
-  
+
+## © 2022 ɢᴜɴᴀᴡᴀʀᴅʜᴀɴᴀ,ɪɴᴄ. ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ.
+
 </div>
