@@ -41,6 +41,12 @@ A socket is one end-point of a two-way communication link between two programs r
 ![GitHub Watchers](https://img.shields.io/github/watchers/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/mGunawardhana/Chat-Application?style=for-the-badge) &nbsp;
 
-
 </div>
 
+<br><br>
+
+<div align="center">
+  
+© 2022 mGunawardhana,Inc. All rights reserved
+  
+</div>
